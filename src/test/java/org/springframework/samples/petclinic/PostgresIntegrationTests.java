@@ -22,6 +22,7 @@ import static org.junit.jupiter.api.Assumptions.assumeTrue;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -78,7 +79,7 @@ public class PostgresIntegrationTests {
 	}
 
 	@Test
-	void testFindAll() throws Exception {
+	void testFindAll() {
 		vets.findAll();
 		vets.findAll(); // served from cache
 	}
@@ -114,8 +115,8 @@ public class PostgresIntegrationTests {
 				Arrays.sort(names);
 				for (String name : names) {
 					String resolved = environment.getProperty(name);
-					String value = source.getProperty(name).toString();
-					if (resolved.equals(value)) {
+					String value = Objects.requireNonNull(source.getProperty(name)).toString();
+					if (Objects.equals(resolved, value)) {
 						log.info(name + "=" + resolved);
 					}
 					else {
@@ -128,7 +129,7 @@ public class PostgresIntegrationTests {
 		private List<EnumerablePropertySource<?>> findPropertiesPropertySources() {
 			List<EnumerablePropertySource<?>> sources = new LinkedList<>();
 			for (PropertySource<?> source : environment.getPropertySources()) {
-				if (source instanceof EnumerablePropertySource enumerable) {
+				if (source instanceof EnumerablePropertySource<?> enumerable) {
 					sources.add(enumerable);
 				}
 			}

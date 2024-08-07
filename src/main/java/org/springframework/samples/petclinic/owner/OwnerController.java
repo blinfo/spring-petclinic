@@ -17,7 +17,7 @@ package org.springframework.samples.petclinic.owner;
 
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -58,6 +58,7 @@ class OwnerController {
 		dataBinder.setDisallowedFields("id");
 	}
 
+	@SuppressWarnings("MVCPathVariableInspection")
 	@ModelAttribute("owner")
 	public Owner findOwner(@PathVariable(name = "ownerId", required = false) Integer ownerId) {
 		return ownerId == null ? new Owner() : this.owners.findById(ownerId);
@@ -82,6 +83,7 @@ class OwnerController {
 		return "redirect:/owners/" + owner.getId();
 	}
 
+	@SuppressWarnings("SameReturnValue")
 	@GetMapping("/owners/find")
 	public String initFindForm() {
 		return "owners/findOwners";
@@ -113,6 +115,7 @@ class OwnerController {
 		return addPaginationModel(page, model, ownersResults);
 	}
 
+	@SuppressWarnings("SameReturnValue")
 	private String addPaginationModel(int page, Model model, Page<Owner> paginated) {
 		List<Owner> listOwners = paginated.getContent();
 		model.addAttribute("currentPage", page);

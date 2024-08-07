@@ -65,8 +65,7 @@ class CrashControllerIntegrationTests {
 	@Test
 	void testTriggerExceptionJson() {
 		ResponseEntity<Map<String, Object>> resp = rest.exchange(
-				RequestEntity.get("http://localhost:" + port + "/oups").build(),
-				new ParameterizedTypeReference<Map<String, Object>>() {
+				RequestEntity.get("http://localhost:" + port + "/oups").build(), new ParameterizedTypeReference<>() {
 				});
 		assertThat(resp).isNotNull();
 		assertThat(resp.getStatusCode()).isEqualTo(HttpStatus.INTERNAL_SERVER_ERROR);

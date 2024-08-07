@@ -7,8 +7,6 @@ build/*
 .project
 .factorypath
 .attach_pid*
-.idea
-*.iml
 /target
 .sts4-cache/
 .vscode

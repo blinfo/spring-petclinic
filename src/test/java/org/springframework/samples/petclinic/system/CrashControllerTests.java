@@ -30,11 +30,11 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 // luck ((plain(st) UNIT test)! :)
 class CrashControllerTests {
 
-	CrashController testee = new CrashController();
+	final CrashController testee = new CrashController();
 
 	@Test
 	void testTriggerException() {
-		assertThatExceptionOfType(RuntimeException.class).isThrownBy(() -> testee.triggerException())
+		assertThatExceptionOfType(RuntimeException.class).isThrownBy(testee::triggerException)
 			.withMessageContaining("Expected: controller used to showcase what happens when an exception is thrown");
 	}
 

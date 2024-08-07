@@ -79,14 +79,12 @@ class ClinicServiceTests {
 	@Autowired
 	protected VetRepository vets;
 
-	Pageable pageable;
-
 	@Test
 	void shouldFindOwnersByLastName() {
-		Page<Owner> owners = this.owners.findByLastName("Davis", pageable);
+		Page<Owner> owners = this.owners.findByLastName("Davis", Pageable.unpaged());
 		assertThat(owners).hasSize(2);
 
-		owners = this.owners.findByLastName("Daviss", pageable);
+		owners = this.owners.findByLastName("Daviss", Pageable.unpaged());
 		assertThat(owners).isEmpty();
 	}
 
@@ -102,7 +100,7 @@ class ClinicServiceTests {
 	@Test
 	@Transactional
 	void shouldInsertOwner() {
-		Page<Owner> owners = this.owners.findByLastName("Schultz", pageable);
+		Page<Owner> owners = this.owners.findByLastName("Schultz", Pageable.unpaged());
 		int found = (int) owners.getTotalElements();
 
 		Owner owner = new Owner();
@@ -114,7 +112,7 @@ class ClinicServiceTests {
 		this.owners.save(owner);
 		assertThat(owner.getId()).isNotZero();
 
-		owners = this.owners.findByLastName("Schultz", pageable);
+		owners = this.owners.findByLastName("Schultz", Pageable.unpaged());
 		assertThat(owners.getTotalElements()).isEqualTo(found + 1);
 	}
 
@@ -205,7 +203,7 @@ class ClinicServiceTests {
 		owner6.addVisit(pet7.getId(), visit);
 		this.owners.save(owner6);
 
-		owner6 = this.owners.findById(6);
+		this.owners.findById(6);
 
 		assertThat(pet7.getVisits()) //
 			.hasSize(found + 1) //

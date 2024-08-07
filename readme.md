@@ -107,13 +107,13 @@ The following items should be installed in your system:
     git clone https://github.com/spring-projects/spring-petclinic.git
     ```
 
-1. Inside Eclipse or STS:
+2. Inside Eclipse or STS:
 
     Open the project via `File -> Import -> Maven -> Existing Maven project`, then select the root directory of the cloned repo.
 
     Then either build on the command line `./mvnw generate-resources` or use the Eclipse launcher (right-click on project and `Run As -> Maven install`) to generate the CSS. Run the application's main method by right-clicking on it and choosing `Run As -> Java Application`.
 
-1. Inside IntelliJ IDEA:
+3. Inside IntelliJ IDEA:
 
     In the main menu, choose `File -> Open` and select the Petclinic [pom.xml](pom.xml). Click on the `Open` button.
 
@@ -121,17 +121,17 @@ The following items should be installed in your system:
 
     - A run configuration named `PetClinicApplication` should have been created for you if you're using a recent Ultimate version. Otherwise, run the application by right-clicking on the `PetClinicApplication` main class and choosing `Run 'PetClinicApplication'`.
 
-1. Navigate to the Petclinic
+4. Navigate to the Petclinic
 
     Visit [http://localhost:8080](http://localhost:8080) in your browser.
 
 ## Looking for something in particular?
 
-|Spring Boot Configuration | Class or Java property files  |
-|--------------------------|---|
-|The Main Class | [PetClinicApplication](https://github.com/spring-projects/spring-petclinic/blob/main/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java) |
-|Properties Files | [application.properties](https://github.com/spring-projects/spring-petclinic/blob/main/src/main/resources) |
-|Caching | [CacheConfiguration](https://github.com/spring-projects/spring-petclinic/blob/main/src/main/java/org/springframework/samples/petclinic/system/CacheConfiguration.java) |
+| Spring Boot Configuration | Class or Java property files                                                                                                                                           |
+|---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| The Main Class            | [PetClinicApplication](https://github.com/spring-projects/spring-petclinic/blob/main/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java)    |
+| Properties Files          | [application.properties](https://github.com/spring-projects/spring-petclinic/blob/main/src/main/resources)                                                             |
+| Caching                   | [CacheConfiguration](https://github.com/spring-projects/spring-petclinic/blob/main/src/main/java/org/springframework/samples/petclinic/system/CacheConfiguration.java) |
 
 ## Interesting Spring Petclinic branches and forks
 
@@ -145,11 +145,11 @@ GitHub org is the "canonical" implementation based on Spring Boot and Thymeleaf.
 One of the best parts about working on the Spring Petclinic application is that we have the opportunity to work in direct contact with many Open Source projects. We found bugs/suggested improvements on various topics such as Spring, Spring Data, Bean Validation and even Eclipse! In many cases, they've been fixed/implemented in just a few days.
 Here is a list of them:
 
-| Name | Issue |
-|------|-------|
-| Spring JDBC: simplify usage of NamedParameterJdbcTemplate | [SPR-10256](https://jira.springsource.org/browse/SPR-10256) and [SPR-10257](https://jira.springsource.org/browse/SPR-10257) |
-| Bean Validation / Hibernate Validator: simplify Maven dependencies and backward compatibility |[HV-790](https://hibernate.atlassian.net/browse/HV-790) and [HV-792](https://hibernate.atlassian.net/browse/HV-792) |
-| Spring Data: provide more flexibility when working with JPQL queries | [DATAJPA-292](https://jira.springsource.org/browse/DATAJPA-292) |
+| Name                                                                                          | Issue                                                                                                                       |
+|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| Spring JDBC: simplify usage of NamedParameterJdbcTemplate                                     | [SPR-10256](https://jira.springsource.org/browse/SPR-10256) and [SPR-10257](https://jira.springsource.org/browse/SPR-10257) |
+| Bean Validation / Hibernate Validator: simplify Maven dependencies and backward compatibility | [HV-790](https://hibernate.atlassian.net/browse/HV-790) and [HV-792](https://hibernate.atlassian.net/browse/HV-792)         |
+| Spring Data: provide more flexibility when working with JPQL queries                          | [DATAJPA-292](https://jira.springsource.org/browse/DATAJPA-292)                                                             |
 
 ## Contributing
 

@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 class WelcomeController {
 
+	@SuppressWarnings("SameReturnValue")
 	@GetMapping("/")
 	public String welcome() {
 		return "welcome";
