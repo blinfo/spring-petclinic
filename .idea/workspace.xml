@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d223341-b62a-4b08-b1d4-e6306eac5202" name="Changes" comment="DNN-257 WIP">
-      <change afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Qodana.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Qodana.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0d223341-b62a-4b08-b1d4-e6306eac5202" name="Changes" comment="DNN-257 WIP" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723041276430</updated>
       <workItem from="1723041278623" duration="63000" />
-      <workItem from="1723041382458" duration="2759000" />
+      <workItem from="1723041382458" duration="3400000" />
     </task>
     <task id="LOCAL-00001" summary="DNN-257 WIP">
       <option name="closed" value="true" />
@@ -134,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723096522517</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="DNN-257 WIP">
+      <option name="closed" value="true" />
+      <created>1723097291099</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723097291099</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
